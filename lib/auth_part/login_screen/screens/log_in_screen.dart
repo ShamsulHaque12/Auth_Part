@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../core_data/custom_button.dart';
 import '../../../core_data/custom_text.dart';
 import '../../../core_data/custom_text_field.dart';
+import '../../forgot_password/screens/forgot_gmail_screen.dart';
 import '../../sign_up_screen/screens/sign_up_screen.dart';
 import '../controller/log_in_controller.dart';
 
@@ -75,7 +76,9 @@ class LogInScreen extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: CustomText(
                   text: "Forgot Password?",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(()=> ForgotGmailScreen());
+                  },
                   fontSize: 13.sp,
                   color: Colors.blueAccent,
                 ),
