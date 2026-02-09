@@ -7,6 +7,7 @@ import '../../../core_data/custom_button.dart';
 import '../../../core_data/custom_text.dart';
 import '../../../core_data/custom_text_field.dart';
 import '../../login_screen/screens/log_in_screen.dart';
+import '../../otp_screen/screens/otp_screen.dart';
 import '../controller/sign_up_controller.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -100,7 +101,7 @@ class SignUpScreen extends StatelessWidget {
               CustomButton(
                   text: "Sign Up",
                   onTap: () {
-
+                    Get.to(() => OtpScreen(), arguments: controller.emailController.text);
                   }
               ),
 
